@@ -20,6 +20,8 @@ function App() {
       <Route path="/Projects" element={<Projects />} />
       <Route path="/Education" element={<Education />} />
       <Route path="/Passions" element={<Passions />} />
+       {/* fallback for wrong urls */}
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
       <Footer />
     </Router>
