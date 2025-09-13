@@ -1,13 +1,230 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+    font-family: 'Fira Code', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(224, 218, 211);
+  overflow-x:  hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+/* home */
+@keyframes blob-left-top-anim{
+  0%{
+    transform:scale(1.1) translate(0,0);
+  }
+  33%{
+    transform:scale(0.9) translate(-65px,0);
+  }
+  62%{
+    transform:scale(0.7) translate(-65px,-65px);
+
+  }
+  100%{
+    transform:scale(0.6) translate(-20vw,-76vh);
+  }
+}
+
+@keyframes blob-right-top-anim{
+  0%{
+    transform:scale(1.1) translate(0,0);
+  }
+  33%{
+    transform:scale(0.9) translate(65px,0);
+  }
+  64%{
+    transform:scale(0.7) translate(65px,-65px);
+  }
+  100%{
+    transform:scale(0.6) translate(20vw,-76vh);
+  }
+}
+@keyframes blob-left-bottom-anim{
+  0%{
+    transform:scale(1.1) translate(0,0);
+  }
+  33%{
+    transform:scale(0.9) translate(-65px,0);
+  }
+  66%{
+    transform:scale(0.7) translate(-65px,65px);
+  }
+  100%{
+    transform:scale(0.6) translate(-6.8vw,-76vh);
+  }
+}
+
+@keyframes blob-right-bottom-anim{
+  0%{
+    transform:scale(1.1) translate(0,0);
+  }
+  33%{
+    transform:scale(0.9) translate(65px,0);
+  }
+  68%{
+    transform:scale(0.7) translate(65px,65px);
+  }
+  100%{
+    transform:scale(0.6) translate(6.8vw,-76vh);
+  }
+}
+.navbar{
+  background-color: #1C1F33;
+  width: 100vw;
+  height: 12vh;
+}
+
+.blobs{
+  filter:url('#goo');
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height: 10vh;
+}
+.blob{
+  position:absolute;
+  background:rgb(224, 218, 211);
+  left:50%;
+  top:50vh;
+  width:5vw;
+  height:5vw;
+  line-height:100px;
+  text-align:center;
+  font-size:40px;
+  border-radius:100%;
+  margin-top:-50px;
+  margin-left:-50px;
+  animation:blob-left-top-anim cubic-bezier(0.770, 0.000, 0.175, 1.000) 4s forwards;
+  
+  &:nth-child(2){
+    animation-name:blob-right-top-anim;
+  }
+  &:nth-child(3){
+    animation-name:blob-left-bottom-anim;
+  }
+  &:nth-child(4){
+    animation-name:blob-right-bottom-anim;
+  }
+}
+
+.blob p{
+  color: rgb(224, 218, 211);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 6vh;
+  font-size: xx-large;
+}
+.blob:hover
+{
+  cursor: pointer;
+}
+
+.skillsname
+{
+  margin: 1vw 0 1vw 0;
+}
+
+/* For Mobile   */
+
+@media (min-width: 300px) and (max-width: 700px)
+{
+
+  .navbar{
+  background-color: #1C1F33;
+  width: 100%;
+  height: 9vh;
+}
+.blob p{
+  font-size: large;
+  line-height: normal;
+  margin-top: 5px;
+}
+  .blobs{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   margin-top: 5px;
+   
+  }
+  .blob{
+    position: relative;
+   /* top: 55vh; */
+   width: 15vw;
+   height: 15vw;
+   left: 0;
+   top: 0;
+    /* margin-top: 1px; */
+    
+  }
+  @keyframes blob-left-top-anim{
+  0%{
+    transform:scale(1.1) translate(40vw,50vh);
+  }
+  33%{
+    transform:scale(0.9) translate(32vw,55vh);
+  }
+  62%{
+    transform:scale(0.7) translate(20vw,25vh);
+
+  }
+  100%{
+    transform:scale(0.7) translate(10vw,8vh);
+  }
+  /* 5vw,7vh  */
+}
+
+@keyframes blob-right-top-anim{
+  0%{
+    transform:scale(1.1) translate(18vw,50vh);
+  }
+  33%{
+    transform:scale(0.9) translate(33vw,68vh);
+  }
+  64%{
+    transform:scale(0.7) translate(70vw,25vh);
+  }
+  100%{
+    transform:scale(0.7) translate(80vw,8vh);
+  }
+  /* 80vw,8vh */
+}
+@keyframes blob-left-bottom-anim{
+  0%{
+    transform:scale(1.1) translate(-5.3vw,50vh);
+  }
+  33%{
+    transform:scale(0.9) translate(-22.5vw,68vh);
+  }
+  66%{
+    transform:scale(0.7) translate(-24vw,25vh);
+  }
+  100%{
+    transform:scale(0.7) translate(-30vw,8vh);
+  }
+}
+@keyframes blob-right-bottom-anim{
+  0%{
+    transform:scale(1.1) translate(-28vw,50vh);
+  }
+  33%{
+    transform:scale(0.9) translate(-22.5vw,55vh);
+  }
+  68%{
+    transform:scale(0.7) translate(-28vw,25vh);
+  }
+  100%{
+    transform:scale(0.7) translate(-28vw,8vh);
+  }
+}
+
 }

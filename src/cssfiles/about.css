@@ -1,0 +1,154 @@
+.aboutmain
+{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  /* height: 100vh; */
+  align-items: center;
+  
+}
+.about
+{
+  
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  height: 30vh;
+  justify-content: center;
+  top: 50vh;
+  align-items: center;
+  gap: 1vw;
+}
+
+.imagecontainer
+{
+ width: 30%;
+ height: 100%;
+ 
+}
+
+.imagecontainer img{
+  width: 100%;
+  height: 100%;
+  object-fit:scale-down;
+  border-radius: 70%;
+}
+
+.aboutcontent p{
+  line-height: 2;
+  color: #1C1F33; 
+}
+
+.aboutcontent
+{
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.aboutcontent2
+{
+  margin: 2vh 0 2vh 0;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  gap: 2vh;
+  line-height: 2;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px; 
+  width: 80%;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.skill-item img {
+  max-width: 100px;
+  height: 100px;
+}
+
+
+h1{
+  font-size: xx-large;
+  text-align: end;
+}
+.heading
+{
+  display: flex;
+  width: 75%;
+  justify-content: start;
+  background-color: #1C1F33;
+  color: rgb(224, 218, 211);
+  margin: 2vw 0 2vw 0;
+  padding: 10px 30px;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);   
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ h1
+ {
+  font-size: large;
+ }
+ .skillsname{
+  font-size: medium;
+ }
+  
+}
+
+@media (min-width: 300px) and (max-width:550px)
+{
+  .about 
+  {
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+  }
+
+  .imagecontainer
+{
+ width: 100%;
+ margin-top: 15px;
+}
+
+.imagecontainer img
+{border-radius: 0;}
+.aboutcontent
+{
+  font-size: small;
+  width: 90%;
+  margin-top: 25px;
+}
+.aboutcontent2
+{
+  font-size: small;
+}
+}
