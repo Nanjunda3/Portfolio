@@ -7,7 +7,7 @@ import Passions from "./components/Passions/Passions";
 import AnimatedCursorBackground from "./AnimatedCursorBackground";
 import Navbar from "./components/home/navbar";
 import Footer from "./components/home/footer"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 function App() {
